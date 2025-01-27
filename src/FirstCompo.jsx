@@ -1,3 +1,4 @@
+import { NavLink } from "react-router"
 
 
 function FirstCompo({data }){
@@ -5,12 +6,13 @@ function FirstCompo({data }){
 
 
     return(
-        <div>
+        <NavLink className="none " to ={`/catagory/${data.strCategory}`}>
+                    <div>
             <h3>Name : {data.strCategory}</h3>
             <img src={data.strCategoryThumb} alt="" />
             <p>Description: <br />{data.strCategoryDescription}</p>
-
         </div>
+        </NavLink>
     )
 }
 
